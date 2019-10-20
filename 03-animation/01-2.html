@@ -22,16 +22,16 @@
       let count = 0;
 
       function draw() {
-        if (count % 30 === 0) {
-          context.clearRect(0, 0, canvas.width, canvas.height);
-          context.beginPath();
-          context.arc(xPos, 150, 10, 0, Math.PI*2, false);
-          context.fill();
-          xPos += 5;
+        if (count % 30 === 0) {   // count의 증가하는 값을 통해서 속도를 컨트롤 할수 있다.
+          context.clearRect(0, 0, canvas.width, canvas.height); // canvas 그림판에서 그려진것을 지운다.
+          context.beginPath();    // 그리고 준비(스텐바이)
+          context.arc(xPos, 150, 10, 0, Math.PI*2, false);  //X축, Y축, 반지름, 시작각도, 끝각도, false는 시계 방향, 반시계 반향으로 갈것인지 결정해준다.
+          context.fill();        // 안에 색을 채워 
+          xPos += 5;             // width 값 간격을 지정한다.         
           // xPos = xPos + 3;
         }
 
-        count++;
+        count+=5;                 // 증가하는 값을 지정한다.
         requestAnimationFrame(draw);
       }
 

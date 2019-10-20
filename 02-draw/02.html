@@ -22,12 +22,13 @@
       const canvas = document.querySelector('.canvas');
       const context = canvas.getContext('2d');
 
-      context.beginPath();
-      context.moveTo(100, 100);
-      context.lineTo(300, 200);
-      context.stroke();
-      context.closePath();
-      // context.fill();
+      context.beginPath(); //선 그리기 준비해
+      context.moveTo(100, 100); // 붓을 위치로 움긴다.
+      context.lineTo(300, 200); // 선을 긁는다.
+      context.stroke();  // 선을 표현해
+      // context.fill(); // 안에 색을 채워 
+      context.closePath(); //선 그리기를 끝내
+      
     </script>
   </body>
 </html>

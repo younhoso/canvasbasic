@@ -15,12 +15,19 @@
       }
     </style>
   </head>
-
+  <!--
+    css에서 width height 를 지정하면 canvas 그림판 크기만 조절이 되는것이다. 
+    canvas엘리먼트에 속성에 width="1000" height="600"이런식으로 주면 그림(피사체)는 밀도가 작게 표현이 된다.
+    (이것은 고해상도 이미지 표현을 해줄려고 canvas도 이렇게 쓴다.)
+    보통 canvas를 브라우저 크기에 2배 크기로 지정해놓고, css로 width: 100%;를 지정해서 사용합니다. 
+    장점: 고해상도에는 잘 표현이 된다.
+    단점: 연산해야할 픽셀수가 많아져서 느려진다.
+  -->
   <body>
     <h1>캔버스 사이즈 설정</h1>
-    <canvas class="canvas" width="500" height="300"></canvas>
+    <canvas class="canvas" width="500" height="300"></canvas>   
     <canvas class="canvas canvas2" width="1000" height="600"></canvas>
-
+    
     <script>
       const canvas = document.querySelector('.canvas');
       const canvas2 = document.querySelector('.canvas2');

@@ -23,11 +23,12 @@
       // closePath
       const canvas = document.querySelector('.canvas');
       const context = canvas.getContext('2d');
+      
       context.beginPath();
-      context.arc(300, 200, 50, 0, 라디안(360), false);
+      context.arc(300, 200, 50, 0, 라디안(360), false); //X축, Y축, 반지름, 시작각도, 끝각도, false는 시계 방향, 반시계 반향으로 갈것인지 결정해준다.
       context.stroke();
       context.beginPath();
-      context.arc(500, 100, 20, 0, 라디안(360), false);
+      context.arc(500, 100, 20, 0, 라디안(360), false); //X축, Y축, 반지름, 시작각도, 끝각도, false는 시계 방향, 반시계 반향으로 갈것인지 결정해준다.
       context.stroke();
     </script>
   </body>
